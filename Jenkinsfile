@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        DOCKER_IMAGE_NAME = "aobatolu/train-schedule"
+        DOCKER_IMAGE_NAME = "aobatolu/train-schedule2"
     }
     stages {
         stage('Build') {
@@ -37,7 +37,7 @@ pipeline {
                 }
             }
         }
-        stage('Canary Deploy) {
+        stage('Canary Deploy') {
             when {
                 branch 'master'
             }
